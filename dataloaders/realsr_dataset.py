@@ -103,10 +103,3 @@ class WaymoRepairDataset(torch.utils.data.Dataset):
         example["conditioning_pixel_values"] = lq_img
         return example
 
-if __name__ == '__main__':
-    dataset = WaymoRepairDataset(split='train', args=None)
-    for i in range(10):
-        example = dataset[i]
-        print(example['conditioning_pixel_values'].shape)
-        print(example['output_pixel_values'].shape)
-    
